@@ -61,7 +61,7 @@ export class ScriptRunner {
         if (!currentPath) { return; }
         const pos = currentPath.lastIndexOf(".");
         const compilePath = currentPath.substr(0, pos < 0 ? currentPath.length : pos) + ".exe";
-        if (await Process.exec(`"C:/Program Files/autoHotkey/Compiler/Ahk2Exe.exe" /in "${currentPath}" /out "${compilePath}"`, { cwd: `${res(currentPath, '..')}` })) {
+        if (await Process.exec(`"D:/AutoHotkey_1.1.30.01/Compiler/Ahk2Exe.exe" /in "${currentPath}" /out "${compilePath}"`, { cwd: `${res(currentPath, '..')}` })) {
             vscode.window.showInformationMessage("compile success!");
         }
     }
